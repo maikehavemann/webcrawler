@@ -19,7 +19,7 @@ class crawl(scrapy.Spider):
         # assign sections of faqs
         faqs = response.css('section.css-1jftgse')
         # assign date of publish
-        time_publish = response.css('time.aipd-gtm')
+        time_publish = response.css('time.aipd-gtm::text').extract()
         # create list for all faqs
         all_faqs = list()
         # loop to iterate over website
