@@ -35,7 +35,7 @@ class crawl(scrapy.Spider):
                 BR24faqs = dict()
                 BR24faqs['title'] = str(titlefaqs[0])
                 BR24faqs['text'] = str(textfaqs[0])
-                BR24faqs['publisher'] = 'BR24'
+                BR24faqs['publisher'] = (self.name)
                 BR24faqs['publish_date'] = str(time_publish[0])
                 BR24faqs['url'] = (self.start_urls[0])
                 all_faqs.append(BR24faqs)
